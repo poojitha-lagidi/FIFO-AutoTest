@@ -1,7 +1,7 @@
 # First-In First-Out (FIFO)
 A FIFO (First-In-First-Out) is a memory array designed to control data flow between two modules. It includes embedded control logic that efficiently manages read and write operations. FIFOs are commonly used for buffering, flow control, and **Synchronization** between hardware and software or between internal modules of a chip.
 </br> 
-There are 2 types of FIFO's:
+There are two types of FIFO's:
 - **Synchronous FIFO**: Data is read and written on the same clock, primarily used for buffering data.
 - **Asynchronous FIFO**: Data is read and written on different clocks, mainly used for transmitting data between two clock domains.
 </br> </br>
