@@ -5,6 +5,7 @@ There are 2 types of FIFO's:
 - **Synchronous FIFO**: Data is read and written on the same clock, primarily used for buffering data.
 - **Asynchronous FIFO**: Data is read and written on different clocks, mainly used for transmitting data between two clock domains.
 </br> </br>
+
 This repository contains the Verilog code to implement a synchronous FIFO, along with an automatic validating testbench to ensure proper functionality.  The testbench streamlines verification by:
 - Generating test vectors to validate read and write operations.
 - Ensuring data integrity and synchronization through comparisons like the **compare_data** task.
