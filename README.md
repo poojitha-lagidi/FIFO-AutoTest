@@ -9,7 +9,7 @@ There are two types of FIFO's:
 The overflow and underflow conditions have been taken care of with the help of empty and full registers.
 FIFO Stands for first in first Out which means that the first elernent enters into the buffer
 and corræs out first.
-<pre> When an attempt is made to read data from an empty FIFO it is called an **underflow**. The design should have an **empty** to avoid getting invalid values. </pre>pre> </br>
+When an attempt is made to read data from an empty FIFO it is called an **underflow**. The design should have an **empty** to avoid getting invalid values. </br>
 When an attempt is made to write data into the already full FIFO. it is called an **overflow**. The design should have a **full** flag to avoid losing the data sent from the previous module. </br>
 This repository contains the Verilog code to implement a synchronous FIFO, along with an automatic validating testbench to ensure proper functionality.  The testbench streamlines verification by:
 - Generating test vectors to validate read and write operations.
