@@ -7,6 +7,7 @@ There are two types of FIFO's:
 </br> </br>
 
 Overflow and underflow conditions are managed using empty and full flags. An **underflow** occurs when there is an attempt to read data from an empty FIFO. To prevent retrieving invalid values, the design should incorporate an **empty** flag. Conversely, an **overflow** occurs when there is an attempt to write data into a full FIFO. To prevent data loss from the preceding module, the design should include a **full** flag. </br> 
+The write_pointer and read_pointer will wrap aound to 0 once it reaches fifo_depth_log and only the least lower bits (that is [fifo_depth_log-1:0]) of pointer will considered as the address to store or read the data. </br>
 
 This repository contains the Verilog code to implement a synchronous FIFO, along with an automatic validating testbench to ensure proper functionality.  The testbench streamlines verification by:
 - Generating test vectors to validate read and write operations.
