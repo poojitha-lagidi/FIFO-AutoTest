@@ -30,6 +30,10 @@ always @ (posedge clk or negedge reset) begin
 		read_pointer <= read_pointer +1'b1;
 end
 // declare full/empty logic
+// If empty == 0 --> This means the FIFO is not empty and there is aleast one data element that can be read.
+// If empty == 1 --> This means the FIFO is empty and there is no data element that can be read.
+// If full == 0 --> This means the FIFO is not full. There is still space available to write more data into the FIFO.
+// If full == 1 --> This indicates that the FIFO is full. No more data can be written into the FIFO until some data is read out, freeing up space.
 assign empty = (read_pointer == write_pointer);
 assign full = (read_pointer == {~write_pointer[fifo_depth_log], write_pointer[fifo_depth_log-1:0]});
 // write data
